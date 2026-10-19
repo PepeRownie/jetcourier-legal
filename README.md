@@ -1,1 +1,139 @@
-# jetcourier-legal
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy - Jet Courier</title>
+  <style>
+    :root {
+      --bg: #090f1d;
+      --card-bg: #111a2e;
+      --text: #e2e8f0;
+      --text-muted: #94a3b8;
+      --accent: #00d2ad;
+      --accent-blue: #0ea5e9;
+      --border: #1e293b;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      margin: 0;
+      padding: 32px 16px;
+    }
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    h1 {
+      color: var(--accent);
+      font-size: 28px;
+      margin-top: 0;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 12px;
+    }
+    h2 {
+      color: var(--accent-blue);
+      font-size: 20px;
+      margin-top: 32px;
+      margin-bottom: 12px;
+    }
+    h3 {
+      color: #cbd5e1;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    p, li {
+      color: var(--text-muted);
+      font-size: 15px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    strong {
+      color: var(--text);
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(0, 210, 173, 0.15);
+      color: var(--accent);
+      padding: 4px 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 16px;
+    }
+    .footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: #64748b;
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="badge">Google Play Store & GDPR Compliant</div>
+    <h1>Privacy Policy for Jet Courier</h1>
+    <p><strong>Effective Date:</strong> October 16, 2026<br>
+    <strong>Application Name:</strong> Jet Courier<br>
+    <strong>Package Identifier:</strong> <code>com.aistudio.jetcourier.vskpyl</code><br>
+    <strong>Contact Email:</strong> <a href="mailto:roman.akrill@gmail.com">roman.akrill@gmail.com</a></p>
+
+    <h2>1. Introduction</h2>
+    <p>Jet Courier is a peer-to-peer crowdsourced air logistics marketplace connecting air travelers ("Couriers") who have available luggage capacity with individuals requiring urgent parcel shipment ("Senders"). This Privacy Policy describes how we handle user data in compliance with Google Play Developer Policies.</p>
+
+    <h2>2. Information We Collect</h2>
+    <h3>A. User-Provided Information</h3>
+    <ul>
+      <li><strong>Account Credentials:</strong> Email address, display name, and Firebase Auth UID used for user authentication and session management.</li>
+      <li><strong>Flight Listings:</strong> Flight numbers, departure dates, airport codes, spare luggage weight capacity, and optional contact info.</li>
+      <li><strong>Package Requests:</strong> Parcel title, description, route, package weight, urgency, and sender contact info.</li>
+      <li><strong>In-App Chat Communications:</strong> Real-time messages exchanged strictly between the matched sender and courier for airport meetups and luggage handovers.</li>
+      <li><strong>Delivery Feedback:</strong> Star ratings (1–5) and written feedback commentary left after delivery.</li>
+    </ul>
+
+    <h3>B. What We Do NOT Collect</h3>
+    <ul>
+      <li><strong>No GPS Tracking:</strong> We do not collect or request device location permissions (no <code>ACCESS_FINE_LOCATION</code>).</li>
+      <li><strong>No Photos or Camera:</strong> We do not request camera or storage permissions.</li>
+      <li><strong>No Credit Cards:</strong> We do not process or store banking or card information.</li>
+    </ul>
+
+    <h2>3. Third-Party Service Providers</h2>
+    <p>The Application relies on Google Cloud services for secure operation:</p>
+    <ul>
+      <li><strong>Google Play Services:</strong> Core Android runtime and Credential Manager authentication.</li>
+      <li><strong>Firebase Authentication:</strong> User accounts, session verification, and Google Sign-In.</li>
+      <li><strong>Cloud Firestore:</strong> Encrypted cloud database for real-time synchronization of listings and chat messages.</li>
+    </ul>
+
+    <h2>4. Data Security</h2>
+    <p>All network traffic is encrypted in transit over HTTPS / TLS 1.3. Cloud Firestore enforces Attribute-Based Access Control (ABAC), guaranteeing that chat messages are only readable by the two participants bound to that shipment.</p>
+
+    <h2>5. Account & Data Deletion Policy</h2>
+    <p>Users can sign out in-app at any time. To request full erasure of your account, listings, and chat messages, email <a href="mailto:roman.akrill@gmail.com">roman.akrill@gmail.com</a> with the subject <em>"Account Deletion Request"</em>. All associated data will be permanently wiped within 7 business days.</p>
+
+    <div class="footer">
+      &copy; 2026 Jet Courier Team. All rights reserved.
+    </div>
+  </div>
+</body>
+</html>
