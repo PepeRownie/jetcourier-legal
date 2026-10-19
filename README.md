@@ -95,7 +95,7 @@
     <p><strong>Effective Date:</strong> October 16, 2026<br>
     <strong>Application Name:</strong> Jet Courier<br>
     <strong>Package Identifier:</strong> <code>com.aistudio.jetcourier.vskpyl</code><br>
-    <strong>Contact Email:</strong> <a href="mailto:roman.akrill@gmail.com">roman.akrill@gmail.com</a></p>
+    <strong>Contact Email:</strong> <a href="mailto:ruiniprod@gmail.com">ruiniprod@gmail.com</a></p>
 
     <h2>1. Introduction</h2>
     <p>Jet Courier is a peer-to-peer crowdsourced air logistics marketplace connecting air travelers ("Couriers") who have available luggage capacity with individuals requiring urgent parcel shipment ("Senders"). This Privacy Policy describes how we handle user data in compliance with Google Play Developer Policies.</p>
