@@ -1,0 +1,482 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R 4 0 R 5 0 R] /Count 3 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Resources << /Font << /F1 10 0 R /F2 11 0 R /F3 12 0 R >> >>
+   /Contents 6 0 R >>
+endobj
+4 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Resources << /Font << /F1 10 0 R /F2 11 0 R /F3 12 0 R >> >>
+   /Contents 7 0 R >>
+endobj
+5 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842]
+   /Resources << /Font << /F1 10 0 R /F2 11 0 R /F3 12 0 R >> >>
+   /Contents 8 0 R >>
+endobj
+6 0 obj
+<< /Length 8571 >>
+stream
+0.040 0.090 0.180 rg 45.0 714.0 505.0 76.0 re f
+0.000 0.820 0.680 rg 45.0 714.0 4.0 76.0 re f
+BT /F2 18 Tf 0.000 0.820 0.680 rg 61.0 764.0 Td (JET COURIER ? QA TESTING MANUAL) Tj ET
+BT /F2 10.5 Tf 0.900 0.950 1.000 rg 61.0 746.0 Td (Pre-Release Verification & Offline-First Protocol Guide) Tj ET
+BT /F1 8 Tf 0.650 0.750 0.850 rg 61.0 728.0 Td (Stack: Kotlin, Compose, Room SQLite, Firestore | Target: Google Play Production) Tj ET
+0.080 0.180 0.320 rg 45.0 678.0 505.0 20.0 re f
+0.000 0.820 0.680 rg 45.0 678.0 3.0 20.0 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 55.0 684.0 Td (1. SYSTEM ARCHITECTURE & OFFLINE-FIRST SYNCHRONIZATION) Tj ET
+0.000 0.650 0.550 rg 47.0 660.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 657.5 Td (Modern Native Architecture: 100% Kotlin Coroutines & Flow, declarative Jetpack Compose UI \(Material 3\), Room SQLite DB, Firebase) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 647.0 Td (Firestore, and Firebase Authentication.) Tj ET
+0.000 0.650 0.550 rg 47.0 636.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 633.5 Td (Single Source of Truth \(SSOT\): The local Room SQLite database serves as the absolute SSOT. All UI screens reactively observe) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 623.0 Td (Flow<List<T>> streams, ensuring zero wait-time on remote network calls.) Tj ET
+0.000 0.650 0.550 rg 47.0 612.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 609.5 Td (Instant Zero-Latency Execution: All actions \(posting a flight, booking a package, sending a chat message, rating a peer\) execute) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 599.0 Td (immediately on SQLite, providing a responsive 0ms user experience.) Tj ET
+0.000 0.650 0.550 rg 47.0 588.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 585.5 Td (Background Firestore Uplink: FirestoreSyncManager monitors events and asynchronously pushes changes to Google Cloud Firestore on) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 575.0 Td (Dispatchers.IO.) Tj ET
+0.000 0.650 0.550 rg 47.0 564.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 561.5 Td (Attribute-Based Access Control \(ABAC\): Private delivery chats are query-authorized via whereArrayContains\('participantUids',) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 551.0 Td (currentUid\), strictly mirroring Firestore security rules to protect user communications.) Tj ET
+0.000 0.650 0.550 rg 47.0 540.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 537.5 Td (Airport Network Resilience: Network failures, captive portals, and airplane mode trigger graceful fallbacks \(withTimeout 15s\)) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 527.0 Td (with zero UI freezes or frozen progress bars.) Tj ET
+0.080 0.180 0.320 rg 45.0 504.0 505.0 20.0 re f
+0.000 0.820 0.680 rg 45.0 504.0 3.0 20.0 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 55.0 510.0 Td (2. DATA MODELS & DATABASE SCHEMA REFERENCE) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 484.0 Td (Table: flights \(Firestore Collection: flights\)) Tj ET
+0.850 0.880 0.920 rg 45.0 480.0 505.0 0.6 re f
+0.120 0.220 0.350 rg 45.0 456.0 505.0 16.0 re f
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 49.0 460.5 Td (Field) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 129.0 460.5 Td (SQLite Type) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 204.0 460.5 Td (Kotlin / Firestore) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 299.0 460.5 Td (Constraints & Notes) Tj ET
+0.960 0.970 0.990 rg 45.0 442.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 442.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 446.0 Td (id) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 446.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 446.0 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 446.0 Td (Primary Key, Auto-Generate) Tj ET
+1.000 1.000 1.000 rg 45.0 429.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 429.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 432.5 Td (flightNumber) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 432.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 432.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 432.5 Td (e.g. BA-177, SQ-308, LH-430) Tj ET
+0.960 0.970 0.990 rg 45.0 415.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 415.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 419.0 Td (fromAirportCode) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 419.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 419.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 419.0 Td (3-letter IATA code \(e.g. LHR, FRA\)) Tj ET
+1.000 1.000 1.000 rg 45.0 402.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 402.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 405.5 Td (toAirportCode) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 405.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 405.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 405.5 Td (3-letter IATA code \(e.g. JFK, BUD\)) Tj ET
+0.960 0.970 0.990 rg 45.0 388.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 388.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 392.0 Td (departureDate) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 392.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 392.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 392.0 Td (ISO format: YYYY-MM-DD) Tj ET
+1.000 1.000 1.000 rg 45.0 375.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 375.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 378.5 Td (capacityKg) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 378.5 Td (REAL) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 378.5 Td (Double) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 378.5 Td (Max luggage capacity in kg) Tj ET
+0.960 0.970 0.990 rg 45.0 361.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 361.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 365.0 Td (contactPhone) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 365.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 365.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 365.0 Td (Traveler contact phone with code) Tj ET
+1.000 1.000 1.000 rg 45.0 348.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 348.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 351.5 Td (contactEmail) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 351.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 351.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 351.5 Td (Verified contact email) Tj ET
+0.960 0.970 0.990 rg 45.0 334.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 334.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 338.0 Td (notes) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 338.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 338.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 338.0 Td (Meeting location, baggage notes) Tj ET
+1.000 1.000 1.000 rg 45.0 321.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 321.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 324.5 Td (userRating) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 324.5 Td (REAL) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 324.5 Td (Double) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 324.5 Td (Community rating \(0.0 to 5.0\)) Tj ET
+0.960 0.970 0.990 rg 45.0 307.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 307.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 311.0 Td (ratingCount) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 311.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 311.0 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 311.0 Td (Total review count) Tj ET
+1.000 1.000 1.000 rg 45.0 294.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 294.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 297.5 Td (isMyOffer) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 297.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 297.5 Td (Boolean) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 297.5 Td (true if created by local user) Tj ET
+0.960 0.970 0.990 rg 45.0 280.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 280.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 284.0 Td (userId \(cloud\)) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 284.0 Td (?) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 284.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 284.0 Td (Firebase Auth UID of flyer) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 264.5 Td (Table: packages \(Firestore Collection: packages\)) Tj ET
+0.850 0.880 0.920 rg 45.0 260.5 505.0 0.6 re f
+0.850 0.880 0.920 rg 45.0 42.0 505.0 0.8 re f
+BT /F1 7.5 Tf 0.500 0.550 0.600 rg 45.0 30.0 Td (Jet Courier v1.0.0 ? Pre-Release Verification Protocol \(Confidential\)) Tj ET
+BT /F2 7.5 Tf 0.300 0.350 0.400 rg 495.0 30.0 Td (Page 1 of 3) Tj ET
+endstream
+endobj
+7 0 obj
+<< /Length 16182 >>
+stream
+0.850 0.880 0.920 rg 45.0 805.0 505.0 1.0 re f
+BT /F2 7.5 Tf 0.300 0.400 0.500 rg 45.0 810.0 Td (JET COURIER ? QA TECHNICAL TESTING & VERIFICATION GUIDE) Tj ET
+BT /F2 7.5 Tf 0.000 0.600 0.500 rg 470.0 810.0 Td (GOOGLE PLAY v1.0.0) Tj ET
+0.120 0.220 0.350 rg 45.0 774.0 505.0 16.0 re f
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 49.0 778.5 Td (Field) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 129.0 778.5 Td (SQLite Type) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 204.0 778.5 Td (Kotlin / Firestore) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 299.0 778.5 Td (Constraints & Notes) Tj ET
+0.960 0.970 0.990 rg 45.0 760.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 760.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 764.0 Td (id) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 764.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 764.0 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 764.0 Td (Primary Key, Auto-Generate) Tj ET
+1.000 1.000 1.000 rg 45.0 747.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 747.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 750.5 Td (title) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 750.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 750.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 750.5 Td (Shipment title headline) Tj ET
+0.960 0.970 0.990 rg 45.0 733.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 733.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 737.0 Td (fromCityOrAirport) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 737.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 737.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 737.0 Td (Origin city or IATA airport) Tj ET
+1.000 1.000 1.000 rg 45.0 720.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 720.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 723.5 Td (toCityOrAirport) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 723.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 723.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 723.5 Td (Destination city or airport) Tj ET
+0.960 0.970 0.990 rg 45.0 706.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 706.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 710.0 Td (weightKg) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 710.0 Td (REAL) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 710.0 Td (Double) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 710.0 Td (Parcel weight in kilograms) Tj ET
+1.000 1.000 1.000 rg 45.0 693.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 693.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 696.5 Td (dimensions) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 696.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 696.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 696.5 Td (e.g. 20x15x10 cm, A4 Envelope) Tj ET
+0.960 0.970 0.990 rg 45.0 679.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 679.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 683.0 Td (rewardUsd) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 683.0 Td (REAL) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 683.0 Td (Double) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 683.0 Td (Monetary compensation \($ USD\)) Tj ET
+1.000 1.000 1.000 rg 45.0 666.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 666.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 669.5 Td (deadline) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 669.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 669.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 669.5 Td (Delivery deadline \(YYYY-MM-DD\)) Tj ET
+0.960 0.970 0.990 rg 45.0 652.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 652.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 656.0 Td (urgency) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 656.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 656.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 656.0 Td (LOW, NORMAL, HIGH, URGENT) Tj ET
+1.000 1.000 1.000 rg 45.0 639.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 639.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 642.5 Td (senderName) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 642.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 642.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 642.5 Td (Shipper full name) Tj ET
+0.960 0.970 0.990 rg 45.0 625.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 625.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 629.0 Td (status) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 629.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 629.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 629.0 Td (OPEN, MATCHED, IN_TRANSIT, DELIVERED) Tj ET
+1.000 1.000 1.000 rg 45.0 612.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 612.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 615.5 Td (matchedFlightId) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 615.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 615.5 Td (Int?) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 615.5 Td (Foreign key referencing flights.id) Tj ET
+0.960 0.970 0.990 rg 45.0 598.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 598.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 602.0 Td (isMyOffer) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 602.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 602.0 Td (Boolean) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 602.0 Td (true if authored by local user) Tj ET
+1.000 1.000 1.000 rg 45.0 585.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 585.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 588.5 Td (createdAt) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 588.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 588.5 Td (Long) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 588.5 Td (Millisecond Unix timestamp) Tj ET
+0.960 0.970 0.990 rg 45.0 571.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 571.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 575.0 Td (userId \(cloud\)) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 575.0 Td (?) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 575.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 575.0 Td (Firebase Auth UID of shipper) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 555.5 Td (Table: delivery_reviews \(Firestore Collection: delivery_reviews\)) Tj ET
+0.850 0.880 0.920 rg 45.0 551.5 505.0 0.6 re f
+0.120 0.220 0.350 rg 45.0 527.5 505.0 16.0 re f
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 49.0 532.0 Td (Field) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 129.0 532.0 Td (SQLite Type) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 204.0 532.0 Td (Kotlin / Firestore) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 299.0 532.0 Td (Constraints & Notes) Tj ET
+0.960 0.970 0.990 rg 45.0 514.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 514.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 517.5 Td (id) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 517.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 517.5 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 517.5 Td (Primary Key, Auto-Generate) Tj ET
+1.000 1.000 1.000 rg 45.0 500.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 500.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 504.0 Td (packageId) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 504.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 504.0 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 504.0 Td (Indexed. Linked package ID) Tj ET
+0.960 0.970 0.990 rg 45.0 487.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 487.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 490.5 Td (flightId) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 490.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 490.5 Td (Int?) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 490.5 Td (Indexed. Linked flight ID) Tj ET
+1.000 1.000 1.000 rg 45.0 473.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 473.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 477.0 Td (reviewerRole) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 477.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 477.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 477.0 Td (SENDER or FLYER) Tj ET
+0.960 0.970 0.990 rg 45.0 460.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 460.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 463.5 Td (reviewerName) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 463.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 463.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 463.5 Td (Display name of reviewer) Tj ET
+1.000 1.000 1.000 rg 45.0 446.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 446.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 450.0 Td (targetName) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 450.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 450.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 450.0 Td (Name of reviewed user) Tj ET
+0.960 0.970 0.990 rg 45.0 433.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 433.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 436.5 Td (rating) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 436.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 436.5 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 436.5 Td (Star rating: 1 to 5 integer) Tj ET
+1.000 1.000 1.000 rg 45.0 419.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 419.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 423.0 Td (feedbackComment) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 423.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 423.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 423.0 Td (Review message text) Tj ET
+0.960 0.970 0.990 rg 45.0 406.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 406.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 409.5 Td (selectedTags) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 409.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 409.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 409.5 Td (e.g. On-Time Delivery, Safe Handoff) Tj ET
+1.000 1.000 1.000 rg 45.0 392.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 392.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 396.0 Td (createdAt) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 396.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 396.0 Td (Long) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 396.0 Td (Millisecond Unix timestamp) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 376.5 Td (Table: chat_messages \(Firestore Collection: chat_messages\)) Tj ET
+0.850 0.880 0.920 rg 45.0 372.5 505.0 0.6 re f
+0.120 0.220 0.350 rg 45.0 348.5 505.0 16.0 re f
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 49.0 353.0 Td (Field) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 129.0 353.0 Td (SQLite Type) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 204.0 353.0 Td (Kotlin / Firestore) Tj ET
+BT /F2 7.5 Tf 1.000 1.000 1.000 rg 299.0 353.0 Td (Constraints & Notes) Tj ET
+0.960 0.970 0.990 rg 45.0 335.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 335.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 338.5 Td (id) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 338.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 338.5 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 338.5 Td (Primary Key, Auto-Generate) Tj ET
+1.000 1.000 1.000 rg 45.0 321.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 321.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 325.0 Td (packageId) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 325.0 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 325.0 Td (Int) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 325.0 Td (Indexed. Deal chat conversation ID) Tj ET
+0.960 0.970 0.990 rg 45.0 308.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 308.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 311.5 Td (senderRole) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 311.5 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 311.5 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 311.5 Td (SENDER, FLYER, or SYSTEM) Tj ET
+1.000 1.000 1.000 rg 45.0 294.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 294.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 298.0 Td (senderName) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 298.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 298.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 298.0 Td (Display name of sender) Tj ET
+0.960 0.970 0.990 rg 45.0 281.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 281.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 284.5 Td (isFromSenderRole) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 284.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 284.5 Td (Boolean) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 284.5 Td (true if message from shipper) Tj ET
+1.000 1.000 1.000 rg 45.0 267.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 267.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 271.0 Td (text) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 271.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 271.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 271.0 Td (Message body content) Tj ET
+0.960 0.970 0.990 rg 45.0 254.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 254.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 257.5 Td (timestamp) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 257.5 Td (INTEGER) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 257.5 Td (Long) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 257.5 Td (Millisecond Unix timestamp) Tj ET
+1.000 1.000 1.000 rg 45.0 240.5 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 240.5 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 244.0 Td (messageType) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 244.0 Td (TEXT) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 244.0 Td (String) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 244.0 Td (TEXT, MEETUP, WEIGHT, STATUS, etc.) Tj ET
+0.960 0.970 0.990 rg 45.0 227.0 505.0 13.5 re f
+0.880 0.880 0.900 rg 45.0 227.0 505.0 0.4 re f
+BT /F1 7 Tf 0.150 0.150 0.150 rg 49.0 230.5 Td (participantUids) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 129.0 230.5 Td (?) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 204.0 230.5 Td (List<String>) Tj ET
+BT /F1 7 Tf 0.150 0.150 0.150 rg 299.0 230.5 Td (Cloud array for ABAC authorization) Tj ET
+0.080 0.180 0.320 rg 45.0 201.0 505.0 20.0 re f
+0.000 0.820 0.680 rg 45.0 201.0 3.0 20.0 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 55.0 207.0 Td (3. APPLICATION STATES, ENUM VALUES & ROLES) Tj ET
+0.000 0.650 0.550 rg 47.0 183.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 180.5 Td (Package Status \(OPEN\): Initial state. Package is listed publicly seeking couriers; matchedFlightId is null.) Tj ET
+0.000 0.650 0.550 rg 47.0 169.5 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 167.0 Td (Package Status \(MATCHED\): Courier accepts parcel or shipper assigns courier. Chat channel unlocks between peers.) Tj ET
+0.000 0.650 0.550 rg 47.0 156.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 153.5 Td (Package Status \(IN_TRANSIT\): Luggage handover confirmed at terminal; courier boards flight with parcel.) Tj ET
+0.000 0.650 0.550 rg 47.0 142.5 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 140.0 Td (Package Status \(DELIVERED\): Parcel arrives at destination; recipient confirms receipt; rating prompt triggered.) Tj ET
+0.000 0.650 0.550 rg 47.0 129.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 126.5 Td (Chat Message Types: TEXT \(standard chat\), MEETUP_PROPOSAL \(terminal meetup coordination\), WEIGHT_CONFIRMATION \(scale weight) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 116.0 Td (verification\), STATUS_ALERT \(flight state updates\), SECURITY_VERIFICATION \(IATA compliance\), PHOTO_RECEIPT \(baggage handover) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 105.5 Td (receipt\).) Tj ET
+0.000 0.650 0.550 rg 47.0 94.5 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 92.0 Td (User Roles: SENDER \(parcel owner/shipper\), FLYER \(traveling passenger courier\), SYSTEM \(automated trust verification and status) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 81.5 Td (notifications\).) Tj ET
+0.850 0.880 0.920 rg 45.0 42.0 505.0 0.8 re f
+BT /F1 7.5 Tf 0.500 0.550 0.600 rg 45.0 30.0 Td (Jet Courier v1.0.0 ? Pre-Release Verification Protocol \(Confidential\)) Tj ET
+BT /F2 7.5 Tf 0.300 0.350 0.400 rg 495.0 30.0 Td (Page 2 of 3) Tj ET
+endstream
+endobj
+8 0 obj
+<< /Length 5435 >>
+stream
+0.850 0.880 0.920 rg 45.0 805.0 505.0 1.0 re f
+BT /F2 7.5 Tf 0.300 0.400 0.500 rg 45.0 810.0 Td (JET COURIER ? QA TECHNICAL TESTING & VERIFICATION GUIDE) Tj ET
+BT /F2 7.5 Tf 0.000 0.600 0.500 rg 470.0 810.0 Td (GOOGLE PLAY v1.0.0) Tj ET
+0.080 0.180 0.320 rg 45.0 770.0 505.0 20.0 re f
+0.000 0.820 0.680 rg 45.0 770.0 3.0 20.0 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 55.0 776.0 Td (4. KEY MANUAL TEST SCENARIOS \(STEP-BY-STEP QA\)) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 750.0 Td (Scenario 1: Authentication & Account Recovery) Tj ET
+0.850 0.880 0.920 rg 45.0 746.0 505.0 0.6 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 727.0 Td (1. Launch app on clean install -> Select 'Create Account' tab.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 713.0 Td (2. Enter email, password \(min 6 chars\), confirm password -> Tap 'Create Account'. Confirm successful dashboard entrance.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 699.0 Td (3. Sign out -> Tap 'Forgot Password?' -> Enter email -> Tap 'Send Reset Link'. Confirm green 'Email Sent!' dialog.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 685.0 Td (4. Tap 'Continue with Google' -> Select account in Credential Manager bottom sheet. Confirm silent instant sign-in.) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 672.0 Td (Scenario 2: Creating a Flight & Package) Tj ET
+0.850 0.880 0.920 rg 45.0 668.0 505.0 0.6 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 649.0 Td (1. Open 'My Flights' -> Tap '+' \(FAB\) -> Enter Flight BA-249, LHR -> GIG, capacity 5.0 kg -> Publish. Confirm flight appears in) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 638.0 Td (feed with 'My Listing' badge.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 624.0 Td (2. Open 'Send Package' -> Enter Title 'Camera Lens', LHR -> GIG, 1.5 kg, $180 reward -> Post. Confirm package appears with 'OPEN') Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 613.0 Td (status.) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 600.0 Td (Scenario 3: Courier Matching & Real-Time Chat) Tj ET
+0.850 0.880 0.920 rg 45.0 596.0 505.0 0.6 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 577.0 Td (1. Open package 'Camera Lens' -> Tap 'Accept Delivery / Assign Flight' -> Choose flight BA-249. Confirm status changes to) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 566.0 Td ('MATCHED'.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 552.0 Td (2. Tap 'Open Delivery Chat' -> Send 'Meeting at Gate B32' -> Tap quick proposal 'Propose Airport Meetup'. Confirm messages stream) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 541.0 Td (to both peers in real time without permission errors.) Tj ET
+BT /F2 8.5 Tf 0.050 0.350 0.550 rg 45.0 528.0 Td (Scenario 4: Airport Offline Mode Stress-Test \(Crucial QA Check\)) Tj ET
+0.850 0.880 0.920 rg 45.0 524.0 505.0 0.6 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 505.0 Td (1. Put Android test device into Airplane Mode \(Wi-Fi: OFF, Cellular: OFF\).) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 491.0 Td (2. In active delivery chat, send messages, change package status to 'IN_TRANSIT', and submit a 5-star courier rating.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 477.0 Td (3. Verify: Zero progress bar hangs, zero ANR dialogs. All updates save instantly to local Room SQLite.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 463.0 Td (4. Restart app while still in Airplane Mode: verify package status remains 'IN_TRANSIT' and chat messages persist.) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 449.0 Td (5. Turn OFF Airplane Mode \(reconnect to LTE/Wi-Fi\): observe Logcat tag 'FirestoreSyncManager'. Confirm cloud sync updates document) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 45.0 438.0 Td (to 'IN_TRANSIT' and pending review uploads automatically.) Tj ET
+0.080 0.180 0.320 rg 45.0 415.0 505.0 20.0 re f
+0.000 0.820 0.680 rg 45.0 415.0 3.0 20.0 re f
+BT /F2 9.5 Tf 1.000 1.000 1.000 rg 55.0 421.0 Td (5. KNOWN CONSTRAINTS & BORDER CASES FOR QA) Tj ET
+0.000 0.650 0.550 rg 47.0 397.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 394.5 Td (Time Zone Offsets: Couriers cross time zones \(e.g., Tokyo UTC+9 to NY UTC-5\). Departure dates \(YYYY-MM-DD\) must remain fixed to) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 384.0 Td (flight origin airport schedule regardless of local phone time zone changes.) Tj ET
+0.000 0.650 0.550 rg 47.0 373.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 370.5 Td (Network Drops & Timeouts: Airport Wi-Fi networks frequently drop. All repository calls enforce withTimeout\(15_000L\) and catch) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 360.0 Td (SocketTimeoutException, preventing hanging spinners.) Tj ET
+0.000 0.650 0.550 rg 47.0 349.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 346.5 Td (Weight Limit Enforcement: A courier flight with capacityKg = 3.0 kg must reject package assignments weighing > 3.0 kg,) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 336.0 Td (displaying a validation warning.) Tj ET
+0.000 0.650 0.550 rg 47.0 325.0 3.5 3.5 re f
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 322.5 Td (Database Migrations: Room schema is locked at Version 5 without destructive fallback. Upgrading APKs from older builds must) Tj ET
+BT /F1 8 Tf 0.150 0.150 0.150 rg 57.0 312.0 Td (never drop tables or wipe user data.) Tj ET
+0.850 0.880 0.920 rg 45.0 42.0 505.0 0.8 re f
+BT /F1 7.5 Tf 0.500 0.550 0.600 rg 45.0 30.0 Td (Jet Courier v1.0.0 ? Pre-Release Verification Protocol \(Confidential\)) Tj ET
+BT /F2 7.5 Tf 0.300 0.350 0.400 rg 495.0 30.0 Td (Page 3 of 3) Tj ET
+endstream
+endobj
+10 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+11 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+12 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Courier >>
+endobj
+xref
+0 13
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000127 00000 n 
+0000000282 00000 n 
+0000000437 00000 n 
+0000000592 00000 n 
+0000009215 00000 n 
+0000025450 00000 n 
+0000000000 00000 n 
+0000030937 00000 n 
+0000031008 00000 n 
+0000031084 00000 n 
+trailer
+<< /Size 13 /Root 1 0 R >>
+startxref
+31153
+%%EOF
